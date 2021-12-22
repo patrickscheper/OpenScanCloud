@@ -1,17 +1,21 @@
 
-# OpenScanCloud
+# OpenScan Cloud API
 Photogrammetry Web API
 
 ## Overview:
 The OpenScan Cloud is intended to be a decentralized, open, and free photogrammetry web API. 
 
-The API can be used as a great addition to existing photogrammetry rigs like the OpenScan Mini or Classic but also any other rig. The only things needed to start a reconstruction are a user-specific (or public) token and of course an image set (preferably as a zip file).
+The API can be used as a great addition to existing photogrammetry rigs like the OpenScan Classic or Mini, but also any other rig. To get started you'll need a a token (public or private) and a set of images.
 
-There are currently three implementations that you can use to generate 3D models through photogrammetry which you can find below.
+There are currently four API implementations that you can use to generate 3D models through photogrammetry:
+- Desktop Uploader for Windows
+- Beta Firmware for the OpenScan Classic & Mini
+- Python Uploader 
+- REST API
 
-If you like the project, feel free to support my work on [BuyMeACoffee](https://www.buymeacoffee.com/OpenScan)
+If you like the project, feel free to support my work on [BuyMeACoffee](https://www.buymeacoffee.com/OpenScan)!
 
-**Note:** that the application is totally free (and hopefully I can keep it free/donation-based in the future). Your data will be transferred through Dropbox and stored/processed on my personal servers. I will use those image sets and resulting 3d models for further research, but none of your data will be published without your explicit consent!
+**Note:** The application is free (and hopefully I can keep it free / donation-based in the future). Your data will be transferred through Dropbox and stored / processed on personal servers. The sets of images and processed 3D models are used for further research but not published outside without explici consent!
 
 ## Implementations
 
@@ -171,6 +175,8 @@ The server will respond with a 200 OK success status response code.
 
 #### Uploading Images
 When you initialized your new project you receive an upload link where you're able to upload your photogrammetry pictures.
+
+It's recommened to upload a ZIP file.
 
 You need to send files as binary data through a POST request with an *application/octet-stream* as *Content-type* header. You don't need an *Authentication* header.
 
